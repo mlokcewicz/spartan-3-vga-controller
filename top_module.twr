@@ -16,7 +16,6 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
-INFO:Timing:2698 - No timing constraints found, doing default enumeration.
 INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
@@ -34,6 +33,571 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
    SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
    Error.
 
+================================================================================
+Timing constraint: TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6659 paths analyzed, 155 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   9.557ns.
+--------------------------------------------------------------------------------
+
+Paths for end point ButtonCtrlInst/y_reg_7 (SLICE_X29Y35.CIN), 282 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     10.443ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.557ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.F1      net (fanout=9)        0.955   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<3>
+    SLICE_X29Y33.G1      net (fanout=1)        0.519   ButtonCtrlInst/y_reg_mux0000<3>
+    SLICE_X29Y33.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<2>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<3>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CLK     Tcinck                1.002   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<7>
+                                                       ButtonCtrlInst/y_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                      9.557ns (6.202ns logic, 3.355ns route)
+                                                       (64.9% logic, 35.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.583ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.417ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.F1      net (fanout=9)        0.955   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<5>
+    SLICE_X29Y34.G3      net (fanout=1)        0.379   ButtonCtrlInst/y_reg_mux0000<5>
+    SLICE_X29Y34.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<5>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CLK     Tcinck                1.002   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<7>
+                                                       ButtonCtrlInst/y_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                      9.417ns (6.202ns logic, 3.215ns route)
+                                                       (65.9% logic, 34.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.649ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.351ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y33.F4      net (fanout=9)        1.007   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y33.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<5>
+    SLICE_X29Y34.G3      net (fanout=1)        0.379   ButtonCtrlInst/y_reg_mux0000<5>
+    SLICE_X29Y34.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<5>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CLK     Tcinck                1.002   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<7>
+                                                       ButtonCtrlInst/y_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                      9.351ns (6.084ns logic, 3.267ns route)
+                                                       (65.1% logic, 34.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ButtonCtrlInst/y_reg_5 (SLICE_X29Y34.CIN), 146 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     10.561ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.439ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.F1      net (fanout=9)        0.955   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<3>
+    SLICE_X29Y33.G1      net (fanout=1)        0.519   ButtonCtrlInst/y_reg_mux0000<3>
+    SLICE_X29Y33.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<2>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<3>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CLK     Tcinck                1.002   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<5>
+                                                       ButtonCtrlInst/y_reg_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.439ns (6.084ns logic, 3.355ns route)
+                                                       (64.5% logic, 35.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.807ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.193ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.BX      net (fanout=9)        1.102   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.COUT    Tbxcy                 0.769   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<3>
+    SLICE_X29Y33.G1      net (fanout=1)        0.519   ButtonCtrlInst/y_reg_mux0000<3>
+    SLICE_X29Y33.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<2>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<3>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CLK     Tcinck                1.002   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<5>
+                                                       ButtonCtrlInst/y_reg_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.193ns (5.691ns logic, 3.502ns route)
+                                                       (61.9% logic, 38.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.875ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.125ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.BX      net (fanout=9)        1.102   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.Y       Tbxy                  1.592   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<1>
+    SLICE_X29Y32.G3      net (fanout=1)        0.379   ButtonCtrlInst/y_reg_mux0000<1>
+    SLICE_X29Y32.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<0>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<1>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<1>
+    SLICE_X29Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<1>
+    SLICE_X29Y33.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg<2>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<2>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CLK     Tcinck                1.002   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<5>
+                                                       ButtonCtrlInst/y_reg_5
+    -------------------------------------------------  ---------------------------
+    Total                                      9.125ns (5.763ns logic, 3.362ns route)
+                                                       (63.2% logic, 36.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ButtonCtrlInst/y_reg_8 (SLICE_X29Y36.CIN), 461 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     10.732ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.268ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.F1      net (fanout=9)        0.955   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<3>
+    SLICE_X29Y33.G1      net (fanout=1)        0.519   ButtonCtrlInst/y_reg_mux0000<3>
+    SLICE_X29Y33.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<2>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<3>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<3>
+    SLICE_X29Y34.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<4>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<5>
+    SLICE_X29Y35.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<7>
+    SLICE_X29Y36.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<7>
+    SLICE_X29Y36.CLK     Tcinck                0.595   ButtonCtrlInst/y_reg<8>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<8>
+                                                       ButtonCtrlInst/y_reg_8
+    -------------------------------------------------  ---------------------------
+    Total                                      9.268ns (5.913ns logic, 3.355ns route)
+                                                       (63.8% logic, 36.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.732ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.268ns (Levels of Logic = 8)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y32.F1      net (fanout=9)        0.955   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y32.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<0>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<1>
+    SLICE_X31Y33.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg_mux0000<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<5>
+    SLICE_X31Y35.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<5>
+    SLICE_X31Y35.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<6>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<6>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<7>
+    SLICE_X29Y35.G1      net (fanout=1)        0.519   ButtonCtrlInst/y_reg_mux0000<7>
+    SLICE_X29Y35.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<7>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<7>
+    SLICE_X29Y36.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<7>
+    SLICE_X29Y36.CLK     Tcinck                0.595   ButtonCtrlInst/y_reg<8>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<8>
+                                                       ButtonCtrlInst/y_reg_8
+    -------------------------------------------------  ---------------------------
+    Total                                      9.268ns (5.913ns logic, 3.355ns route)
+                                                       (63.8% logic, 36.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.798ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ButtonCtrlInst/y_reg_7 (FF)
+  Destination:          ButtonCtrlInst/y_reg_8 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.202ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 0.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ButtonCtrlInst/y_reg_7 to ButtonCtrlInst/y_reg_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y35.YQ      Tcko                  0.587   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/y_reg_7
+    SLICE_X31Y36.G3      net (fanout=6)        1.357   ButtonCtrlInst/y_reg<7>
+    SLICE_X31Y36.Y       Tilo                  0.704   ButtonCtrlInst/y_reg_mux0000<8>
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.F1      net (fanout=3)        0.524   ButtonCtrlInst/y_reg_cmp_ge0000215
+    SLICE_X28Y34.X       Tilo                  0.759   ButtonCtrlInst/y_reg_cmp_ge0000
+                                                       ButtonCtrlInst/y_reg_cmp_ge0000218
+    SLICE_X31Y33.F4      net (fanout=9)        1.007   ButtonCtrlInst/y_reg_cmp_ge0000
+    SLICE_X31Y33.COUT    Topcyf                1.162   ButtonCtrlInst/y_reg_mux0000<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_lut<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<2>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<3>
+    SLICE_X31Y34.COUT    Tbyp                  0.118   ButtonCtrlInst/y_reg_mux0000<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<4>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<5>
+    SLICE_X31Y35.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<5>
+    SLICE_X31Y35.Y       Tciny                 0.869   ButtonCtrlInst/y_reg_mux0000<6>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_cy<6>
+                                                       ButtonCtrlInst/Maddsub_y_reg_mux0000_xor<7>
+    SLICE_X29Y35.G1      net (fanout=1)        0.519   ButtonCtrlInst/y_reg_mux0000<7>
+    SLICE_X29Y35.COUT    Topcyg                1.001   ButtonCtrlInst/y_reg<6>
+                                                       ButtonCtrlInst/Mcount_y_reg_lut<7>
+                                                       ButtonCtrlInst/Mcount_y_reg_cy<7>
+    SLICE_X29Y36.CIN     net (fanout=1)        0.000   ButtonCtrlInst/Mcount_y_reg_cy<7>
+    SLICE_X29Y36.CLK     Tcinck                0.595   ButtonCtrlInst/y_reg<8>
+                                                       ButtonCtrlInst/Mcount_y_reg_xor<8>
+                                                       ButtonCtrlInst/y_reg_8
+    -------------------------------------------------  ---------------------------
+    Total                                      9.202ns (5.795ns logic, 3.407ns route)
+                                                       (63.0% logic, 37.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point DispCtrlInst/ck25MHz (SLICE_X12Y43.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.594ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DispCtrlInst/ck25MHz (FF)
+  Destination:          DispCtrlInst/ck25MHz (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.594ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 20.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: DispCtrlInst/ck25MHz to DispCtrlInst/ck25MHz
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y43.YQ      Tcko                  0.522   DispCtrlInst/ck25MHz1
+                                                       DispCtrlInst/ck25MHz
+    SLICE_X12Y43.SR      net (fanout=2)        0.581   DispCtrlInst/ck25MHz1
+    SLICE_X12Y43.CLK     Tcksr       (-Th)    -0.491   DispCtrlInst/ck25MHz1
+                                                       DispCtrlInst/ck25MHz
+    -------------------------------------------------  ---------------------------
+    Total                                      1.594ns (1.013ns logic, 0.581ns route)
+                                                       (63.6% logic, 36.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ButtonCtrlInst/move_cnt_12 (SLICE_X3Y37.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ButtonCtrlInst/move_cnt_12 (FF)
+  Destination:          ButtonCtrlInst/move_cnt_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 20.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ButtonCtrlInst/move_cnt_12 to ButtonCtrlInst/move_cnt_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y37.XQ       Tcko                  0.473   ButtonCtrlInst/move_cnt<12>
+                                                       ButtonCtrlInst/move_cnt_12
+    SLICE_X3Y37.F4       net (fanout=2)        0.333   ButtonCtrlInst/move_cnt<12>
+    SLICE_X3Y37.CLK      Tckf        (-Th)    -0.801   ButtonCtrlInst/move_cnt<12>
+                                                       ButtonCtrlInst/move_cnt<12>_rt
+                                                       ButtonCtrlInst/Mcount_move_cnt_xor<12>
+                                                       ButtonCtrlInst/move_cnt_12
+    -------------------------------------------------  ---------------------------
+    Total                                      1.607ns (1.274ns logic, 0.333ns route)
+                                                       (79.3% logic, 20.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ButtonCtrlInst/move_cnt_16 (SLICE_X3Y39.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.614ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ButtonCtrlInst/move_cnt_16 (FF)
+  Destination:          ButtonCtrlInst/move_cnt_16 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.614ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         mclk_BUFGP rising at 20.000ns
+  Destination Clock:    mclk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: ButtonCtrlInst/move_cnt_16 to ButtonCtrlInst/move_cnt_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y39.XQ       Tcko                  0.473   ButtonCtrlInst/move_cnt<16>
+                                                       ButtonCtrlInst/move_cnt_16
+    SLICE_X3Y39.F4       net (fanout=2)        0.340   ButtonCtrlInst/move_cnt<16>
+    SLICE_X3Y39.CLK      Tckf        (-Th)    -0.801   ButtonCtrlInst/move_cnt<16>
+                                                       ButtonCtrlInst/move_cnt<16>_rt
+                                                       ButtonCtrlInst/Mcount_move_cnt_xor<16>
+                                                       ButtonCtrlInst/move_cnt_16
+    -------------------------------------------------  ---------------------------
+    Total                                      1.614ns (1.274ns logic, 0.340ns route)
+                                                       (78.9% logic, 21.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: DispCtrlInst/ck25MHz1/CLK
+  Logical resource: DispCtrlInst/ck25MHz/CK
+  Location pin: SLICE_X12Y43.CLK
+  Clock network: mclk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: DispCtrlInst/ck25MHz1/CLK
+  Logical resource: DispCtrlInst/ck25MHz/CK
+  Location pin: SLICE_X12Y43.CLK
+  Clock network: mclk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: DispCtrlInst/ck25MHz1/CLK
+  Logical resource: DispCtrlInst/ck25MHz/CK
+  Location pin: SLICE_X12Y43.CLK
+  Clock network: mclk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
 
 
 Data Sheet report:
@@ -45,18 +609,32 @@ Clock to Setup on destination clock mclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-mclk           |    2.210|         |         |         |
+mclk           |    9.557|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Sep 25 21:57:33 2026 
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 6659 paths, 0 nets, and 247 connections
+
+Design statistics:
+   Minimum period:   9.557ns{1}   (Maximum frequency: 104.635MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sat Sep 26 00:03:47 2026 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4517 MB
+Peak Memory Usage: 4518 MB
 
 
 

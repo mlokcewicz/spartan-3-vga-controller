@@ -13,7 +13,8 @@ entity DispCtrl is
         outBlue : out std_logic_vector(2 downto 1);
 		  
         x : in integer range 0 to 639;
-        y : in integer range 0 to 479
+        y : in integer range 0 to 479;
+		  color_set : in std_logic_vector(2 downto 0)
        );
 end DispCtrl;
 
@@ -23,11 +24,14 @@ architecture Behavioral of DispCtrl is
   constant PAL:integer:=640;		--Pixels/Active Line (pixels)
   constant LAF:integer:=480;		--Lines/Active Frame (lines)
   constant PLD: integer:=800;	   --Pixel/Line Divider
-  constant LFD: integer:=521;	   --Line/Frame Divider
+  constant LFD: integer:=525;	   --Line/Frame Divider
   constant HPW:integer:=96;		--Horizontal synchro Pulse Width (pixels)
   constant HFP:integer:=16;		--Horizontal synchro Front Porch (pixels)
   constant VPW:integer:=2;		   --Verical synchro Pulse Width (lines)
   constant VFP:integer:=10;		--Verical synchro Front Porch (lines)
+  
+  constant OBJ_H:integer:=10;		-- Object height
+  constant OBJ_W:integer:=10;		-- Object width
 
 -- signals for VGA Demo
   signal intHcnt: integer range 0 to PLD-1;  -- PLD-1 - horizontal counter
@@ -73,15 +77,21 @@ begin
 end if;
 end process; 
 
-  mixer: process(intHcnt, intVcnt) 
+  mixer: process(intHcnt, intVcnt, x, y) 
   begin
     if intHcnt < PAL and intVcnt < LAF then	-- in the active screen
-			if (intVcnt < 160) then 	-- red strip
-				color <= x"e0";
+			
+			if (intHcnt > (x - OBJ_W/2) and intHcnt < (x + OBJ_W/2) and intVcnt > (y - OBJ_H/2) and intVcnt < (y + OBJ_H/2)) then
+				color <= x"F4";
+				
+			elsif (intVcnt < 160) then -- red strip
+				 if color_set(0) = '0' then color <= x"E0"; else color <= x"80"; end if;
+
 			elsif (intVcnt < 320) then -- green strip
-				color <= x"1c";
-			else 								-- blue strip
-				color <= x"03";
+				 if color_set(1) = '0' then color <= x"1C"; else color <= x"10"; end if;
+
+			else -- blue strip
+				 if color_set(2) = '0' then color <= x"03"; else color <= x"02"; end if;
 			end if;
     else
 		color <= x"00";

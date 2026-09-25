@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.17 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: top_module.prj
 
@@ -104,14 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/top_module is now defined in a different file.  It was defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/top_module.vhd", and is now defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd".
-WARNING:HDLParsers:3607 - Unit work/top_module/Structural is now defined in a different file.  It was defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/top_module.vhd", and is now defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd".
-WARNING:HDLParsers:3607 - Unit work/ButtonCtrl is now defined in a different file.  It was defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/ButtonCtrl.vhd", and is now defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd".
-WARNING:HDLParsers:3607 - Unit work/ButtonCtrl/Behavioral is now defined in a different file.  It was defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/ButtonCtrl.vhd", and is now defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd".
-WARNING:HDLParsers:3607 - Unit work/DispCtrl is now defined in a different file.  It was defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/DispCtrl.vhd", and is now defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd".
-WARNING:HDLParsers:3607 - Unit work/DispCtrl/Behavioral is now defined in a different file.  It was defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/DispCtrl.vhd", and is now defined in "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd".
 Compiling vhdl file "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd" in Library work.
-Architecture behavioral of Entity dispctrl is up to date.
+Entity <dispctrl> compiled.
+Entity <dispctrl> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd" in Library work.
 Architecture behavioral of Entity buttonctrl is up to date.
 Compiling vhdl file "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd" in Library work.
@@ -134,6 +129,8 @@ Analyzing Entity <top_module> in library <work> (Architecture <structural>).
 Entity <top_module> analyzed. Unit <top_module> generated.
 
 Analyzing Entity <DispCtrl> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd" line 80: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <color_set>
 Entity <DispCtrl> analyzed. Unit <DispCtrl> generated.
 
 Analyzing Entity <ButtonCtrl> in library <work> (Architecture <behavioral>).
@@ -148,50 +145,87 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <DispCtrl>.
     Related source file is "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd".
-WARNING:Xst:647 - Input <x> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <y> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 9-bit adder for signal <$add0000> created at line 84.
     Found 1-bit register for signal <ck25MHz>.
-    Found 10-bit comparator less for signal <color$cmp_lt0000> created at line 78.
-    Found 10-bit comparator less for signal <color$cmp_lt0001> created at line 78.
-    Found 10-bit comparator less for signal <color$cmp_lt0002> created at line 79.
-    Found 10-bit comparator less for signal <color$cmp_lt0003> created at line 80.
-    Found 10-bit comparator greatequal for signal <HS$cmp_ge0000> created at line 47.
-    Found 10-bit comparator less for signal <HS$cmp_lt0000> created at line 47.
+    Found 11-bit subtractor for signal <color$addsub0000> created at line 84.
+    Found 10-bit adder for signal <color$addsub0001> created at line 84.
+    Found 10-bit subtractor for signal <color$addsub0002> created at line 84.
+    Found 11-bit comparator greater for signal <color$cmp_gt0000> created at line 84.
+    Found 10-bit comparator greater for signal <color$cmp_gt0001> created at line 84.
+    Found 10-bit comparator less for signal <color$cmp_lt0000> created at line 82.
+    Found 10-bit comparator less for signal <color$cmp_lt0001> created at line 82.
+    Found 10-bit comparator less for signal <color$cmp_lt0002> created at line 84.
+    Found 10-bit comparator less for signal <color$cmp_lt0003> created at line 84.
+    Found 10-bit comparator less for signal <color$cmp_lt0004> created at line 85.
+    Found 10-bit comparator less for signal <color$cmp_lt0005> created at line 88.
+    Found 10-bit comparator greatequal for signal <HS$cmp_ge0000> created at line 51.
+    Found 10-bit comparator less for signal <HS$cmp_lt0000> created at line 51.
     Found 10-bit up counter for signal <intHcnt>.
     Found 10-bit up counter for signal <intVcnt>.
-    Found 10-bit comparator greatequal for signal <VS$cmp_ge0000> created at line 50.
-    Found 10-bit comparator less for signal <VS$cmp_lt0000> created at line 50.
+    Found 10-bit comparator greatequal for signal <VS$cmp_ge0000> created at line 54.
+    Found 10-bit comparator less for signal <VS$cmp_lt0000> created at line 54.
     Summary:
 	inferred   2 Counter(s).
 	inferred   1 D-type flip-flop(s).
-	inferred   8 Comparator(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
 Unit <DispCtrl> synthesized.
 
 
 Synthesizing Unit <ButtonCtrl>.
     Related source file is "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd".
-WARNING:Xst:647 - Input <btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <sw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 19-bit up counter for signal <move_cnt>.
+    Found 10-bit down counter for signal <x_reg>.
+    Found 10-bit comparator greatequal for signal <x_reg$cmp_ge0000> created at line 69.
+    Found 10-bit comparator lessequal for signal <x_reg$cmp_le0000> created at line 63.
+    Found 10-bit comparator less for signal <x_reg$cmp_lt0000> created at line 69.
+    Found 10-bit addsub for signal <x_reg$mux0000> created at line 69.
+    Found 9-bit down counter for signal <y_reg>.
+    Found 9-bit comparator greatequal for signal <y_reg$cmp_ge0000> created at line 81.
+    Found 9-bit comparator lessequal for signal <y_reg$cmp_le0000> created at line 75.
+    Found 9-bit comparator less for signal <y_reg$cmp_lt0000> created at line 81.
+    Found 9-bit addsub for signal <y_reg$mux0000> created at line 81.
+    Summary:
+	inferred   3 Counter(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
 Unit <ButtonCtrl> synthesized.
 
 
 Synthesizing Unit <top_module>.
     Related source file is "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd".
-WARNING:Xst:1780 - Signal <ck50MHz> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:647 - Input <sw<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <top_module> synthesized.
 
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 2
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 1
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+ 9-bit addsub                                          : 1
+# Counters                                             : 5
+ 10-bit down counter                                   : 1
  10-bit up counter                                     : 2
+ 19-bit up counter                                     : 1
+ 9-bit down counter                                    : 1
 # Registers                                            : 1
  1-bit register                                        : 1
-# Comparators                                          : 8
- 10-bit comparator greatequal                          : 2
- 10-bit comparator less                                : 6
+# Comparators                                          : 18
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 9
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 1
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 1
+ 9-bit comparator lessequal                            : 1
 
 =========================================================================
 
@@ -199,20 +233,34 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <ButtonCtrlInst> is unconnected in block <top_module>.
-   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 2
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 1
+ 10-bit addsub                                         : 1
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+ 9-bit addsub                                          : 1
+# Counters                                             : 5
+ 10-bit down counter                                   : 1
  10-bit up counter                                     : 2
+ 19-bit up counter                                     : 1
+ 9-bit down counter                                    : 1
 # Registers                                            : 1
  Flip-Flops                                            : 1
-# Comparators                                          : 8
- 10-bit comparator greatequal                          : 2
- 10-bit comparator less                                : 6
+# Comparators                                          : 18
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 9
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 1
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 1
+ 9-bit comparator lessequal                            : 1
 
 =========================================================================
 
@@ -224,9 +272,11 @@ Optimizing unit <top_module> ...
 
 Optimizing unit <DispCtrl> ...
 
+Optimizing unit <ButtonCtrl> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 11.
 
 Final Macro Processing ...
 
@@ -234,8 +284,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 21
- Flip-Flops                                            : 21
+# Registers                                            : 59
+ Flip-Flops                                            : 59
 
 =========================================================================
 
@@ -261,30 +311,33 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 23
+# IOs                              : 31
 
 Cell Usage :
-# BELS                             : 79
+# BELS                             : 479
 #      GND                         : 1
-#      INV                         : 2
-#      LUT1                        : 18
-#      LUT2                        : 1
-#      LUT3                        : 2
-#      LUT4                        : 12
+#      INV                         : 24
+#      LUT1                        : 55
+#      LUT2                        : 60
+#      LUT2_D                      : 1
+#      LUT3                        : 28
+#      LUT4                        : 31
 #      LUT4_D                      : 1
-#      LUT4_L                      : 1
-#      MUXCY                       : 18
-#      MUXF5                       : 2
+#      LUT4_L                      : 4
+#      MUXCY                       : 152
+#      MUXF5                       : 4
 #      VCC                         : 1
-#      XORCY                       : 20
-# FlipFlops/Latches                : 21
-#      FDR                         : 11
+#      XORCY                       : 117
+# FlipFlops/Latches                : 59
+#      FDE                         : 19
+#      FDR                         : 30
 #      FDRE                        : 10
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 10
-#      OBUF                        : 10
+# IO Buffers                       : 25
+#      IBUF                        : 7
+#      OBUF                        : 18
 =========================================================================
 
 Device utilization summary:
@@ -292,11 +345,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       20  out of    960     2%  
- Number of Slice Flip Flops:             21  out of   1920     1%  
- Number of 4 input LUTs:                 37  out of   1920     1%  
- Number of IOs:                          23
- Number of bonded IOBs:                  11  out of     83    13%  
+ Number of Slices:                      110  out of    960    11%  
+ Number of Slice Flip Flops:             59  out of   1920     3%  
+ Number of 4 input LUTs:                204  out of   1920    10%  
+ Number of IOs:                          31
+ Number of bonded IOBs:                  26  out of     83    31%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -321,7 +374,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 DispCtrlInst/ck25MHz1              | BUFG                   | 20    |
-mclk                               | BUFGP                  | 1     |
+mclk                               | BUFGP                  | 39    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -332,10 +385,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.677ns (Maximum Frequency: 176.149MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 7.270ns
-   Maximum combinational path delay: No path found
+   Minimum period: 9.457ns (Maximum Frequency: 105.742MHz)
+   Minimum input arrival time before clock: 5.282ns
+   Maximum output required time after clock: 13.771ns
+   Maximum combinational path delay: 6.236ns
 
 Timing Detail:
 --------------
@@ -343,81 +396,185 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DispCtrlInst/ck25MHz1'
-  Clock period: 5.677ns (frequency: 176.149MHz)
+  Clock period: 7.156ns (frequency: 139.743MHz)
   Total number of paths / destination ports: 510 / 50
 -------------------------------------------------------------------------
-Delay:               5.677ns (Levels of Logic = 3)
-  Source:            DispCtrlInst/intHcnt_1 (FF)
+Delay:               7.156ns (Levels of Logic = 3)
+  Source:            DispCtrlInst/intHcnt_2 (FF)
   Destination:       DispCtrlInst/intVcnt_9 (FF)
   Source Clock:      DispCtrlInst/ck25MHz1 rising
   Destination Clock: DispCtrlInst/ck25MHz1 rising
 
-  Data Path: DispCtrlInst/intHcnt_1 to DispCtrlInst/intVcnt_9
+  Data Path: DispCtrlInst/intHcnt_2 to DispCtrlInst/intVcnt_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  DispCtrlInst/intHcnt_1 (DispCtrlInst/intHcnt_1)
-     LUT4_D:I0->O          1   0.704   0.455  DispCtrlInst/intVcnt_and000017 (DispCtrlInst/intVcnt_and000017)
-     LUT4_L:I2->LO         1   0.704   0.104  DispCtrlInst/intVcnt_and0000127 (DispCtrlInst/intHcnt_cmp_eq0000)
-     LUT4:I3->O           10   0.704   0.882  DispCtrlInst/intVcnt_and000048 (DispCtrlInst/intVcnt_and0000)
+     FDR:C->Q              4   0.591   0.762  DispCtrlInst/intHcnt_2 (DispCtrlInst/intHcnt_2)
+     LUT4:I0->O            1   0.704   0.595  DispCtrlInst/intVcnt_and000017 (DispCtrlInst/intVcnt_and000017)
+     LUT4:I0->O           21   0.704   1.303  DispCtrlInst/intVcnt_and0000128 (DispCtrlInst/intHcnt_cmp_eq0000)
+     LUT4:I0->O           10   0.704   0.882  DispCtrlInst/intVcnt_and000047 (DispCtrlInst/intVcnt_and0000)
      FDRE:R                    0.911          DispCtrlInst/intVcnt_0
     ----------------------------------------
-    Total                      5.677ns (3.614ns logic, 2.063ns route)
-                                       (63.7% logic, 36.3% route)
+    Total                      7.156ns (3.614ns logic, 3.542ns route)
+                                       (50.5% logic, 49.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mclk'
-  Clock period: 1.949ns (frequency: 513.084MHz)
-  Total number of paths / destination ports: 1 / 1
+  Clock period: 9.457ns (frequency: 105.742MHz)
+  Total number of paths / destination ports: 6659 / 77
 -------------------------------------------------------------------------
-Delay:               1.949ns (Levels of Logic = 0)
-  Source:            DispCtrlInst/ck25MHz (FF)
-  Destination:       DispCtrlInst/ck25MHz (FF)
+Delay:               9.457ns (Levels of Logic = 15)
+  Source:            ButtonCtrlInst/x_reg_4 (FF)
+  Destination:       ButtonCtrlInst/x_reg_9 (FF)
   Source Clock:      mclk rising
   Destination Clock: mclk rising
 
-  Data Path: DispCtrlInst/ck25MHz to DispCtrlInst/ck25MHz
+  Data Path: ButtonCtrlInst/x_reg_4 to ButtonCtrlInst/x_reg_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.447  DispCtrlInst/ck25MHz (DispCtrlInst/ck25MHz1)
-     FDR:R                     0.911          DispCtrlInst/ck25MHz
+     FDE:C->Q              6   0.591   0.844  ButtonCtrlInst/x_reg_4 (ButtonCtrlInst/x_reg_4)
+     LUT3:I0->O            2   0.704   0.482  ButtonCtrlInst/x_reg_cmp_ge000023 (ButtonCtrlInst/x_reg_cmp_ge000023)
+     LUT4:I2->O           11   0.704   1.012  ButtonCtrlInst/x_reg_cmp_ge0000225 (ButtonCtrlInst/x_reg_cmp_ge0000)
+     LUT2:I1->O            1   0.704   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_lut<0> (ButtonCtrlInst/Maddsub_x_reg_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<0> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<1> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<2> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<3> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<4> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<5> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<6> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<7> (ButtonCtrlInst/Maddsub_x_reg_mux0000_cy<7>)
+     XORCY:CI->O           1   0.804   0.455  ButtonCtrlInst/Maddsub_x_reg_mux0000_xor<8> (ButtonCtrlInst/x_reg_mux0000<8>)
+     LUT3:I2->O            1   0.704   0.000  ButtonCtrlInst/Mcount_x_reg_lut<8> (ButtonCtrlInst/Mcount_x_reg_lut<8>)
+     MUXCY:S->O            0   0.464   0.000  ButtonCtrlInst/Mcount_x_reg_cy<8> (ButtonCtrlInst/Mcount_x_reg_cy<8>)
+     XORCY:CI->O           1   0.804   0.000  ButtonCtrlInst/Mcount_x_reg_xor<9> (ButtonCtrlInst/Mcount_x_reg9)
+     FDE:D                     0.308          ButtonCtrlInst/x_reg_9
     ----------------------------------------
-    Total                      1.949ns (1.502ns logic, 0.447ns route)
-                                       (77.1% logic, 22.9% route)
+    Total                      9.457ns (6.664ns logic, 2.793ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mclk'
+  Total number of paths / destination ports: 157 / 38
+-------------------------------------------------------------------------
+Offset:              5.282ns (Levels of Logic = 3)
+  Source:            btn<2> (PAD)
+  Destination:       ButtonCtrlInst/x_reg_9 (FF)
+  Destination Clock: mclk rising
+
+  Data Path: btn<2> to ButtonCtrlInst/x_reg_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.218   1.040  btn_2_IBUF (btn_2_IBUF)
+     LUT4_L:I1->LO         1   0.704   0.179  ButtonCtrlInst/x_reg_not000145 (ButtonCtrlInst/x_reg_not000145)
+     LUT2:I1->O           10   0.704   0.882  ButtonCtrlInst/x_reg_not000153 (ButtonCtrlInst/x_reg_not0001)
+     FDE:CE                    0.555          ButtonCtrlInst/x_reg_0
+    ----------------------------------------
+    Total                      5.282ns (3.181ns logic, 2.101ns route)
+                                       (60.2% logic, 39.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DispCtrlInst/ck25MHz1'
-  Total number of paths / destination ports: 79 / 10
+  Total number of paths / destination ports: 659 / 10
 -------------------------------------------------------------------------
-Offset:              7.270ns (Levels of Logic = 3)
-  Source:            DispCtrlInst/intVcnt_9 (FF)
-  Destination:       OutRed<2> (PAD)
+Offset:              11.085ns (Levels of Logic = 16)
+  Source:            DispCtrlInst/intHcnt_0 (FF)
+  Destination:       OutBlue<1> (PAD)
   Source Clock:      DispCtrlInst/ck25MHz1 rising
 
-  Data Path: DispCtrlInst/intVcnt_9 to OutRed<2>
+  Data Path: DispCtrlInst/intHcnt_0 to OutBlue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             4   0.591   0.762  DispCtrlInst/intVcnt_9 (DispCtrlInst/intVcnt_9)
-     LUT4:I0->O            3   0.704   0.706  DispCtrlInst/color<1>31 (DispCtrlInst/N7)
-     LUT4:I0->O            3   0.704   0.531  DispCtrlInst/color<6>1 (OutRed_0_OBUF)
-     OBUF:I->O                 3.272          OutRed_2_OBUF (OutRed<2>)
+     FDR:C->Q              4   0.591   0.666  DispCtrlInst/intHcnt_0 (DispCtrlInst/intHcnt_0)
+     LUT2:I1->O            1   0.704   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_lut<0> (DispCtrlInst/Mcompar_color_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<0> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<1> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<2> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<3> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<4> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<5> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<6> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<7> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<8> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<9> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           2   0.459   0.622  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<10> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<10>)
+     LUT4:I0->O            2   0.704   0.622  DispCtrlInst/color<0>11 (DispCtrlInst/N01)
+     LUT4:I0->O            2   0.704   0.622  DispCtrlInst/color<0>21 (OutBlue_2_OBUF)
+     LUT2:I0->O            1   0.704   0.420  DispCtrlInst/color<0>3 (OutBlue_1_OBUF)
+     OBUF:I->O                 3.272          OutBlue_1_OBUF (OutBlue<1>)
     ----------------------------------------
-    Total                      7.270ns (5.271ns logic, 1.999ns route)
-                                       (72.5% logic, 27.5% route)
+    Total                     11.085ns (8.133ns logic, 2.952ns route)
+                                       (73.4% logic, 26.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 2552 / 8
+-------------------------------------------------------------------------
+Offset:              13.771ns (Levels of Logic = 18)
+  Source:            ButtonCtrlInst/x_reg_0 (FF)
+  Destination:       OutBlue<1> (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: ButtonCtrlInst/x_reg_0 to OutBlue<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.591   0.844  ButtonCtrlInst/x_reg_0 (ButtonCtrlInst/x_reg_0)
+     LUT1:I0->O            1   0.704   0.000  DispCtrlInst/Msub_color_addsub0000_cy<0>_rt (DispCtrlInst/Msub_color_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.464   0.000  DispCtrlInst/Msub_color_addsub0000_cy<0> (DispCtrlInst/Msub_color_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<1> (DispCtrlInst/Msub_color_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<2> (DispCtrlInst/Msub_color_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<3> (DispCtrlInst/Msub_color_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<4> (DispCtrlInst/Msub_color_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<5> (DispCtrlInst/Msub_color_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<6> (DispCtrlInst/Msub_color_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<7> (DispCtrlInst/Msub_color_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  DispCtrlInst/Msub_color_addsub0000_cy<8> (DispCtrlInst/Msub_color_addsub0000_cy<8>)
+     XORCY:CI->O           1   0.804   0.595  DispCtrlInst/Msub_color_addsub0000_xor<9> (DispCtrlInst/color_addsub0000<9>)
+     LUT2:I0->O            1   0.704   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_lut<9> (DispCtrlInst/Mcompar_color_cmp_gt0000_lut<9>)
+     MUXCY:S->O            1   0.464   0.000  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<9> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<9>)
+     MUXCY:CI->O           2   0.459   0.622  DispCtrlInst/Mcompar_color_cmp_gt0000_cy<10> (DispCtrlInst/Mcompar_color_cmp_gt0000_cy<10>)
+     LUT4:I0->O            2   0.704   0.622  DispCtrlInst/color<0>11 (DispCtrlInst/N01)
+     LUT4:I0->O            2   0.704   0.622  DispCtrlInst/color<0>21 (OutBlue_2_OBUF)
+     LUT2:I0->O            1   0.704   0.420  DispCtrlInst/color<0>3 (OutBlue_1_OBUF)
+     OBUF:I->O                 3.272          OutBlue_1_OBUF (OutBlue<1>)
+    ----------------------------------------
+    Total                     13.771ns (10.046ns logic, 3.725ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               6.236ns (Levels of Logic = 3)
+  Source:            sw<1> (PAD)
+  Destination:       OutGreen<0> (PAD)
+
+  Data Path: sw<1> to OutGreen<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  sw_1_IBUF (sw_1_IBUF)
+     LUT3:I0->O            1   0.704   0.420  DispCtrlInst/color<2>2 (OutGreen_0_OBUF)
+     OBUF:I->O                 3.272          OutGreen_0_OBUF (OutGreen<0>)
+    ----------------------------------------
+    Total                      6.236ns (5.194ns logic, 1.042ns route)
+                                       (83.3% logic, 16.7% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.13 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.84 secs
  
 --> 
 
-Total memory usage is 4530660 kilobytes
+Total memory usage is 4530632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

@@ -9,35 +9,35 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 25 21:57:25 2026
+Mapped Date    : Sat Sep 26 00:03:38 2026
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   22
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            21 out of   1,920    1%
-  Number of 4 input LUTs:                21 out of   1,920    1%
+  Number of Slice Flip Flops:            59 out of   1,920    3%
+  Number of 4 input LUTs:               155 out of   1,920    8%
 Logic Distribution:
-  Number of occupied Slices:             22 out of     960    2%
-    Number of Slices containing only related logic:      22 out of      22 100%
-    Number of Slices containing unrelated logic:          0 out of      22   0%
+  Number of occupied Slices:            111 out of     960   11%
+    Number of Slices containing only related logic:     111 out of     111 100%
+    Number of Slices containing unrelated logic:          0 out of     111   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          39 out of   1,920    2%
-    Number used as logic:                21
-    Number used as a route-thru:         18
+  Total Number of 4 input LUTs:         210 out of   1,920   10%
+    Number used as logic:               155
+    Number used as a route-thru:         55
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 23 out of      83   27%
+  Number of bonded IOBs:                 26 out of      83   31%
   Number of BUFGMUXs:                     2 out of      24    8%
 
-Average Fanout of Non-Clock Nets:                2.35
+Average Fanout of Non-Clock Nets:                2.42
 
 Peak Memory Usage:  4415 MB
 Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   0 secs 
+Total CPU time to MAP completion:   1 secs 
 
 NOTES:
 
@@ -78,61 +78,16 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:367 - The signal <btn<0>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <btn<1>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <btn<2>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <btn<3>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<0>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<1>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<2>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<3>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<4>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<5>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<6>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <sw<7>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp HS is set
-   but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp VS is set
-   but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp OutBlue<1>
-   is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp OutBlue<2>
-   is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp OutRed<0>
-   is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp OutRed<1>
-   is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp OutRed<2>
-   is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
-   OutGreen<0> is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
-   OutGreen<1> is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
-   OutGreen<2> is set but the tri state is not configured. 
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network btn<3>_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 11 more times for the
-   following (max. 5 shown):
-   btn<2>_IBUF,
-   btn<1>_IBUF,
-   btn<0>_IBUF,
-   sw<7>_IBUF,
-   sw<6>_IBUF
+INFO:LIT:243 - Logical network sw<7> has no load.
+INFO:LIT:395 - The above info message is repeated 4 more times for the following
+   (max. 5 shown):
+   sw<6>,
+   sw<5>,
+   sw<4>,
+   sw<3>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -161,16 +116,24 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutBlue<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutBlue<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutGreen<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutGreen<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutGreen<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutRed<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutRed<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| OutRed<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
-| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLUP   | 0 / 0    |
+| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| Led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| OutBlue<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutBlue<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutGreen<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutGreen<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutGreen<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutRed<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutRed<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| OutRed<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
+| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              |          | 0 / 0    |
 | btn<0>                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | btn<1>                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | btn<2>                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
@@ -179,11 +142,6 @@ Section 6 - IOB Properties
 | sw<0>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | sw<1>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | sw<2>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<3>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<4>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<5>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<6>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| sw<7>                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

@@ -1,33 +1,58 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Sep 25 21:57:25 2026
+// Written by: Map P.20131013 on Sat Sep 26 00:03:39 2026
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "HS" LOCATE = SITE "J14" LEVEL 1;
+COMP "VS" LOCATE = SITE "K13" LEVEL 1;
+COMP "mclk" LOCATE = SITE "B8" LEVEL 1;
+PIN mclk_pin<0> = BEL "mclk" PINNAME PAD;
+PIN "mclk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "OutGreen<0>" LOCATE = SITE "F14" LEVEL 1;
+COMP "OutGreen<1>" LOCATE = SITE "G13" LEVEL 1;
+COMP "OutGreen<2>" LOCATE = SITE "G14" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "Led<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "Led<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "Led<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "Led<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "Led<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "Led<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "Led<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "Led<7>" LOCATE = SITE "G1" LEVEL 1;
+COMP "OutBlue<1>" LOCATE = SITE "H13" LEVEL 1;
+COMP "OutBlue<2>" LOCATE = SITE "J13" LEVEL 1;
 COMP "btn<0>" LOCATE = SITE "G12" LEVEL 1;
 COMP "btn<1>" LOCATE = SITE "C11" LEVEL 1;
 COMP "btn<2>" LOCATE = SITE "M4" LEVEL 1;
 COMP "btn<3>" LOCATE = SITE "A7" LEVEL 1;
-COMP "HS" LOCATE = SITE "J14" LEVEL 1;
-COMP "VS" LOCATE = SITE "K13" LEVEL 1;
-COMP "OutBlue<1>" LOCATE = SITE "H13" LEVEL 1;
-COMP "sw<0>" LOCATE = SITE "P11" LEVEL 1;
-COMP "OutBlue<2>" LOCATE = SITE "J13" LEVEL 1;
-COMP "sw<1>" LOCATE = SITE "L3" LEVEL 1;
-COMP "sw<2>" LOCATE = SITE "K3" LEVEL 1;
-COMP "sw<3>" LOCATE = SITE "B4" LEVEL 1;
-COMP "sw<4>" LOCATE = SITE "G3" LEVEL 1;
-COMP "sw<5>" LOCATE = SITE "F3" LEVEL 1;
-COMP "sw<6>" LOCATE = SITE "E2" LEVEL 1;
-COMP "sw<7>" LOCATE = SITE "N3" LEVEL 1;
-COMP "mclk" LOCATE = SITE "B8" LEVEL 1;
-PIN mclk_pin<0> = BEL "mclk" PINNAME PAD;
-PIN "mclk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "OutRed<0>" LOCATE = SITE "C14" LEVEL 1;
 COMP "OutRed<1>" LOCATE = SITE "D13" LEVEL 1;
 COMP "OutRed<2>" LOCATE = SITE "F13" LEVEL 1;
-COMP "OutGreen<0>" LOCATE = SITE "F14" LEVEL 1;
-COMP "OutGreen<1>" LOCATE = SITE "G13" LEVEL 1;
-COMP "OutGreen<2>" LOCATE = SITE "G14" LEVEL 1;
 NET "mclk_BUFGP/IBUFG" BEL "mclk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP mclk = BEL "DispCtrlInst/ck25MHz" BEL "ButtonCtrlInst/y_reg_8" BEL
+        "ButtonCtrlInst/y_reg_7" BEL "ButtonCtrlInst/y_reg_6" BEL
+        "ButtonCtrlInst/y_reg_5" BEL "ButtonCtrlInst/y_reg_4" BEL
+        "ButtonCtrlInst/y_reg_3" BEL "ButtonCtrlInst/y_reg_2" BEL
+        "ButtonCtrlInst/y_reg_1" BEL "ButtonCtrlInst/y_reg_0" BEL
+        "ButtonCtrlInst/x_reg_9" BEL "ButtonCtrlInst/x_reg_8" BEL
+        "ButtonCtrlInst/x_reg_7" BEL "ButtonCtrlInst/x_reg_6" BEL
+        "ButtonCtrlInst/x_reg_5" BEL "ButtonCtrlInst/x_reg_4" BEL
+        "ButtonCtrlInst/x_reg_3" BEL "ButtonCtrlInst/x_reg_2" BEL
+        "ButtonCtrlInst/x_reg_1" BEL "ButtonCtrlInst/x_reg_0" BEL
+        "ButtonCtrlInst/move_cnt_18" BEL "ButtonCtrlInst/move_cnt_17" BEL
+        "ButtonCtrlInst/move_cnt_16" BEL "ButtonCtrlInst/move_cnt_15" BEL
+        "ButtonCtrlInst/move_cnt_14" BEL "ButtonCtrlInst/move_cnt_13" BEL
+        "ButtonCtrlInst/move_cnt_12" BEL "ButtonCtrlInst/move_cnt_11" BEL
+        "ButtonCtrlInst/move_cnt_10" BEL "ButtonCtrlInst/move_cnt_9" BEL
+        "ButtonCtrlInst/move_cnt_8" BEL "ButtonCtrlInst/move_cnt_7" BEL
+        "ButtonCtrlInst/move_cnt_6" BEL "ButtonCtrlInst/move_cnt_5" BEL
+        "ButtonCtrlInst/move_cnt_4" BEL "ButtonCtrlInst/move_cnt_3" BEL
+        "ButtonCtrlInst/move_cnt_2" BEL "ButtonCtrlInst/move_cnt_1" BEL
+        "ButtonCtrlInst/move_cnt_0" BEL "mclk_BUFGP/BUFG.GCLKMUX" BEL
+        "mclk_BUFGP/BUFG";
+TS_mclk = PERIOD TIMEGRP "mclk" 20 ns HIGH 50%;
 SCHEMATIC END;
 
