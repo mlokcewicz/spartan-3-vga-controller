@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Elektronika\Repozytoria\GitHub\hardware\spartan-3-vga-controller\top_module.ncd
+OUTFILE=D:\Elektronika\Repozytoria\GitHub\hardware\spartan-3-vga-controller\top_module.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=D:\Elektronika\Repozytoria\GitHub\hardware\spartan-3-vga-controller
+LICENSE=WebPack
+USER_INFO=211642482_0_0_311

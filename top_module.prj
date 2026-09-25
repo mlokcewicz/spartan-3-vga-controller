@@ -1,0 +1,3 @@
+vhdl work "DispCtrl.vhd"
+vhdl work "ButtonCtrl.vhd"
+vhdl work "top_module.vhd"

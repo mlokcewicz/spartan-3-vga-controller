@@ -1,0 +1,28 @@
+V3 15
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd 2026/09/25.19:25:50 P.20131013
+EN work/ButtonCtrl 1790366237 \
+      FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/ButtonCtrl/Behavioral 1790366238 \
+      FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd \
+      EN work/ButtonCtrl 1790366237
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd 2026/09/25.21:53:36 P.20131013
+EN work/DispCtrl 1790366235 \
+      FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/DispCtrl/Behavioral 1790366236 \
+      FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd \
+      EN work/DispCtrl 1790366235
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd 2026/09/25.19:31:47 P.20131013
+EN work/top_module 1790366239 \
+      FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/top_module/Structural 1790366240 \
+      FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd \
+      EN work/top_module 1790366239 CP DispCtrl CP ButtonCtrl
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/ButtonCtrl.vhd 2026/09/25.19:25:50 P.20131013
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/DispCtrl.vhd 2026/09/25.21:53:36 P.20131013
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/top_module.vhd 2026/09/25.19:31:47 P.20131013

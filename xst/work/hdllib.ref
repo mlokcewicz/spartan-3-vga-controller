@@ -1,0 +1,6 @@
+EN buttonctrl NULL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd sub00/vhpl04 1790366237
+EN dispctrl NULL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd sub00/vhpl01 1790366235
+EN top_module NULL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd sub00/vhpl00 1790366239
+AR top_module structural D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd sub00/vhpl03 1790366240
+AR dispctrl behavioral D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd sub00/vhpl02 1790366236
+AR buttonctrl behavioral D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd sub00/vhpl05 1790366238
