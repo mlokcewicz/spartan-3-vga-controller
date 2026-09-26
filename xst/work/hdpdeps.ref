@@ -1,28 +1,28 @@
 V3 15
 FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd 2026/09/25.23:48:09 P.20131013
-EN work/ButtonCtrl 1790373809 \
+EN work/ButtonCtrl 1790410583 \
       FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179 LB UNISIM PH unisim/VCOMPONENTS 1381692182
-AR work/ButtonCtrl/Behavioral 1790373810 \
+AR work/ButtonCtrl/Behavioral 1790410584 \
       FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/ButtonCtrl.vhd \
-      EN work/ButtonCtrl 1790373809
-FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd 2026/09/26.00:03:22 P.20131013
-EN work/DispCtrl 1790373807 \
+      EN work/ButtonCtrl 1790410583
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd 2026/09/26.10:16:17 P.20131013
+EN work/DispCtrl 1790410581 \
       FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DispCtrl/Behavioral 1790373808 \
+AR work/DispCtrl/Behavioral 1790410582 \
       FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd \
-      EN work/DispCtrl 1790373807
-FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd 2026/09/25.23:57:48 P.20131013
-EN work/top_module 1790373811 \
+      EN work/DispCtrl 1790410581
+FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd 2026/09/26.10:14:48 P.20131013
+EN work/top_module 1790410585 \
       FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/top_module/Structural 1790373812 \
+AR work/top_module/Structural 1790410586 \
       FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd \
-      EN work/top_module 1790373811 CP DispCtrl CP ButtonCtrl
+      EN work/top_module 1790410585 CP DispCtrl CP ButtonCtrl
 FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/ButtonCtrl.vhd 2026/09/25.19:25:50 P.20131013
 FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/DispCtrl.vhd 2026/09/25.21:53:36 P.20131013
 FL D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/vga-controller/top_module.vhd 2026/09/25.19:31:47 P.20131013

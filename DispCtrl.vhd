@@ -65,19 +65,15 @@ begin
   -- generate Horizontal and Vertical synchro signals
   syncro: process (ck25MHz)
   begin
-
-  if ck25MHz'event and ck25MHz='1' then
-    if intHcnt=PLD-1 then
-       intHcnt<=0;
-      if intVcnt=LFD-1 then intVcnt<=0;
-      else intVcnt<=intVcnt+1;
+    if ck25MHz'event and ck25MHz='1' then
+      if intHcnt=PLD-1 then intHcnt<=0;
+       if intVcnt=LFD-1 then intVcnt<=0; else intVcnt<=intVcnt+1; end if;
+      else intHcnt<=intHcnt+1;
       end if;
-    else intHcnt<=intHcnt+1;
-    end if;
-end if;
-end process; 
+    end if; 
+  end process; 
 
-  mixer: process(intHcnt, intVcnt, x, y) 
+  mixer: process(intHcnt, intVcnt, x, y, color_set) 
   begin
     if intHcnt < PAL and intVcnt < LAF then	-- in the active screen
 			

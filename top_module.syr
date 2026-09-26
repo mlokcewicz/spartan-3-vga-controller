@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: top_module.prj
 
@@ -129,8 +129,6 @@ Analyzing Entity <top_module> in library <work> (Architecture <structural>).
 Entity <top_module> analyzed. Unit <top_module> generated.
 
 Analyzing Entity <DispCtrl> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd" line 80: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <color_set>
 Entity <DispCtrl> analyzed. Unit <DispCtrl> generated.
 
 Analyzing Entity <ButtonCtrl> in library <work> (Architecture <behavioral>).
@@ -145,19 +143,19 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <DispCtrl>.
     Related source file is "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/DispCtrl.vhd".
-    Found 9-bit adder for signal <$add0000> created at line 84.
+    Found 9-bit adder for signal <$add0000> created at line 80.
     Found 1-bit register for signal <ck25MHz>.
-    Found 11-bit subtractor for signal <color$addsub0000> created at line 84.
-    Found 10-bit adder for signal <color$addsub0001> created at line 84.
-    Found 10-bit subtractor for signal <color$addsub0002> created at line 84.
-    Found 11-bit comparator greater for signal <color$cmp_gt0000> created at line 84.
-    Found 10-bit comparator greater for signal <color$cmp_gt0001> created at line 84.
-    Found 10-bit comparator less for signal <color$cmp_lt0000> created at line 82.
-    Found 10-bit comparator less for signal <color$cmp_lt0001> created at line 82.
-    Found 10-bit comparator less for signal <color$cmp_lt0002> created at line 84.
-    Found 10-bit comparator less for signal <color$cmp_lt0003> created at line 84.
-    Found 10-bit comparator less for signal <color$cmp_lt0004> created at line 85.
-    Found 10-bit comparator less for signal <color$cmp_lt0005> created at line 88.
+    Found 11-bit subtractor for signal <color$addsub0000> created at line 80.
+    Found 10-bit adder for signal <color$addsub0001> created at line 80.
+    Found 10-bit subtractor for signal <color$addsub0002> created at line 80.
+    Found 11-bit comparator greater for signal <color$cmp_gt0000> created at line 80.
+    Found 10-bit comparator greater for signal <color$cmp_gt0001> created at line 80.
+    Found 10-bit comparator less for signal <color$cmp_lt0000> created at line 78.
+    Found 10-bit comparator less for signal <color$cmp_lt0001> created at line 78.
+    Found 10-bit comparator less for signal <color$cmp_lt0002> created at line 80.
+    Found 10-bit comparator less for signal <color$cmp_lt0003> created at line 80.
+    Found 10-bit comparator less for signal <color$cmp_lt0004> created at line 81.
+    Found 10-bit comparator less for signal <color$cmp_lt0005> created at line 84.
     Found 10-bit comparator greatequal for signal <HS$cmp_ge0000> created at line 51.
     Found 10-bit comparator less for signal <HS$cmp_lt0000> created at line 51.
     Found 10-bit up counter for signal <intHcnt>.
@@ -194,7 +192,6 @@ Unit <ButtonCtrl> synthesized.
 
 Synthesizing Unit <top_module>.
     Related source file is "D:/Elektronika/Repozytoria/GitHub/hardware/spartan-3-vga-controller/top_module.vhd".
-WARNING:Xst:647 - Input <sw<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <top_module> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -311,7 +308,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 31
+# IOs                              : 26
 
 Cell Usage :
 # BELS                             : 479
@@ -348,7 +345,7 @@ Selected Device : 3s100ecp132-4
  Number of Slices:                      110  out of    960    11%  
  Number of Slice Flip Flops:             59  out of   1920     3%  
  Number of 4 input LUTs:                204  out of   1920    10%  
- Number of IOs:                          31
+ Number of IOs:                          26
  Number of bonded IOBs:                  26  out of     83    31%  
  Number of GCLKs:                         2  out of     24     8%  
 
@@ -567,14 +564,14 @@ Delay:               6.236ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.84 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.12 secs
  
 --> 
 
-Total memory usage is 4530632 kilobytes
+Total memory usage is 4530556 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

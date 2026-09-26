@@ -9,7 +9,7 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat Sep 26 00:03:38 2026
+Mapped Date    : Sat Sep 26 10:16:31 2026
 
 Design Summary
 --------------
@@ -81,14 +81,6 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network sw<7> has no load.
-INFO:LIT:395 - The above info message is repeated 4 more times for the following
-   (max. 5 shown):
-   sw<6>,
-   sw<5>,
-   sw<4>,
-   sw<3>
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
